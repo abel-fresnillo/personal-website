@@ -1,0 +1,60 @@
+/* Articles page — supplemental styles */
+
+.articles-hero {
+  background-color: var(--color-surface);
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.articles-hero-container {
+  max-width: 800px;
+}
+
+.articles-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-neutral-500);
+  margin-bottom: var(--space-6);
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.articles-back:hover {
+  color: var(--color-primary-600);
+  gap: var(--space-3);
+}
+
+.articles-hero-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw + 0.5rem, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-neutral-900);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.articles-hero-sub {
+  font-size: 1.125rem;
+  color: var(--color-neutral-500);
+  max-width: 56ch;
+  line-height: 1.75;
+}
+
+.articles-body {
+  background-color: var(--color-neutral-050);
+}
+
+.articles-footer {
+  padding-top: 0;
+}
+
+.notify-cta-text {
+  font-size: 0.9375rem;
+  color: var(--color-neutral-500);
+  margin-bottom: var(--space-4);
+  max-width: none;
+}

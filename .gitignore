@@ -1,0 +1,6 @@
+# Private reference assets (not for version control)
+assets/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
