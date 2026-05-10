@@ -14,6 +14,9 @@
   <!-- AOS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -31,15 +34,20 @@
 
       <nav aria-label="Main navigation">
         <ul class="nav-links" role="list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#articles">Articles</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="#work" data-i18n="nav_work">Work</a></li>
+          <li><a href="#certifications" data-i18n="nav_certs">Certifications</a></li>
+          <li style="display:none"><a href="#articles" data-i18n="nav_articles">Articles</a></li>
         </ul>
       </nav>
 
-      <a href="mailto:isc.abel@gmail.com?subject=Consulting%20Inquiry" class="btn btn-primary nav-cta">Get In Touch</a>
+      <a href="mailto:isc.abel@gmail.com?subject=Consulting%20Inquiry" class="btn btn-primary nav-cta" data-i18n="nav_cta">Get In Touch</a>
+
+      <div class="lang-toggle" role="group" aria-label="Select language">
+        <button class="lang-toggle-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-toggle-btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
 
       <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="hamburger-bar"></span>
@@ -51,13 +59,19 @@
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <ul role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#articles">Articles</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#work" data-i18n="nav_work">Work</a></li>
+        <li><a href="#certifications" data-i18n="nav_certs">Certifications</a></li>
+        <li style="display:none"><a href="#articles" data-i18n="nav_articles">Articles</a></li>
         <li>
-          <a href="mailto:isc.abel@gmail.com?subject=Consulting%20Inquiry" class="btn btn-primary mobile-cta">Get In Touch</a>
+          <a href="mailto:isc.abel@gmail.com?subject=Consulting%20Inquiry" class="btn btn-primary mobile-cta" data-i18n="nav_cta">Get In Touch</a>
+        </li>
+        <li class="mobile-lang-toggle">
+          <div class="lang-toggle lang-toggle--mobile" role="group" aria-label="Select language">
+            <button class="lang-toggle-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+            <button class="lang-toggle-btn" data-lang="es" aria-pressed="false">ES</button>
+          </div>
         </li>
       </ul>
     </div>
@@ -71,12 +85,12 @@
     <section id="hero" class="hero" aria-label="Introduction">
       <div class="container hero-container">
         <div class="hero-content">
-          <p class="hero-eyebrow">Director of Architecture &nbsp;·&nbsp; Cloud &amp; AI Strategy</p>
+          <p class="hero-eyebrow" data-i18n="hero_eyebrow">Director of Architecture · Cloud &amp; AI Strategy</p>
           <h1 class="hero-name">Abel Fresnillo</h1>
-          <p class="hero-tagline">I help organizations navigate their most complex technology challenges — from cloud modernization to agentic AI — and turn them into measurable business outcomes.</p>
+          <p class="hero-tagline" data-i18n="hero_tagline">I help organizations navigate their most complex technology challenges — from cloud modernization to agentic AI — and turn them into measurable business outcomes.</p>
           <div class="hero-ctas">
-            <a href="mailto:isc.abel@gmail.com?subject=Consulting%20Inquiry" class="btn btn-primary btn-large">Let's Talk</a>
-            <a href="#work" class="btn btn-outline btn-large">View My Work</a>
+            <a href="mailto:isc.abel@gmail.com?subject=Consulting%20Inquiry" class="btn btn-primary btn-large" data-i18n="hero_cta_primary">Let's Talk</a>
+            <a href="#work" class="btn btn-outline btn-large" data-i18n="hero_cta_secondary">View My Work</a>
           </div>
         </div>
         <div class="hero-visual">
@@ -105,7 +119,7 @@
          ============================================================ -->
     <div class="proof-strip" aria-label="Professional experience at">
       <div class="container proof-container">
-        <p class="proof-label">Experience across</p>
+        <p class="proof-label" data-i18n="proof_label">Experience across</p>
         <div class="proof-logos">
           <span class="proof-item">Amazon Web Services</span>
           <span class="proof-dot" aria-hidden="true"></span>
@@ -126,29 +140,29 @@
     <section id="about" class="about section" aria-labelledby="about-heading">
       <div class="container about-container">
         <div class="about-content" data-aos="fade-up">
-          <span class="section-tag">About</span>
-          <h2 id="about-heading" class="section-heading">Bridging strategy and engineering since 2005</h2>
-          <p class="about-lead">I've spent 15+ years at the intersection of technology strategy and delivery — from writing my first web services at Softtek in Monterrey, Mexico, to leading cloud and AI architecture engagements for Fortune 500 banks and insurance companies.</p>
-          <p>What sets my work apart is that I bridge the gap between executive vision and engineering reality. I've held roles on both sides: as a hands-on senior engineer who led Lowe's first cloud-native application on Microsoft Azure, and as a Senior Solutions Architect at AWS advising enterprises on their most complex cloud challenges.</p>
-          <p>Today I work directly with clients to design technology solutions that address complex business challenges — from agentic AI platforms that automate customer operations, to security architectures that eliminate critical vulnerabilities. I bring both the technical depth to get the details right and the strategic perspective to ensure the work drives real business value.</p>
+          <span class="section-tag" data-i18n="about_tag">About</span>
+          <h2 id="about-heading" class="section-heading" data-i18n="about_heading">Bridging strategy and engineering since 2005</h2>
+          <p class="about-lead" data-i18n="about_lead">I've spent 15+ years at the intersection of technology strategy and delivery — from writing my first web services at Softtek in Monterrey, Mexico, to leading cloud and AI architecture engagements for Fortune 500 banks and insurance companies.</p>
+          <p data-i18n="about_p1">What sets my work apart is that I bridge the gap between executive vision and engineering reality. I've held roles on both sides: as a hands-on senior engineer who led Lowe's first cloud-native application on Microsoft Azure, and as a Senior Solutions Architect at AWS advising enterprises on their most complex cloud challenges.</p>
+          <p data-i18n="about_p2">Today I work directly with clients to design technology solutions that address complex business challenges — from agentic AI platforms that automate customer operations, to security architectures that eliminate critical vulnerabilities. I bring both the technical depth to get the details right and the strategic perspective to ensure the work drives real business value.</p>
           <div class="about-stats" aria-label="Key statistics">
             <div class="stat" data-aos="fade-up" data-aos-delay="0">
               <div class="stat-top">
                 <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
               </div>
-              <span class="stat-label">Years of experience</span>
+              <span class="stat-label" data-i18n="stat_years">Years of experience</span>
             </div>
             <div class="stat" data-aos="fade-up" data-aos-delay="100">
               <div class="stat-top">
                 <span class="stat-number" data-target="9">0</span>
               </div>
-              <span class="stat-label">Professional certifications</span>
+              <span class="stat-label" data-i18n="stat_certs">Professional certifications</span>
             </div>
             <div class="stat" data-aos="fade-up" data-aos-delay="200">
               <div class="stat-top">
                 <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
               </div>
-              <span class="stat-label">Engineers in community of practice</span>
+              <span class="stat-label" data-i18n="stat_community">Engineers in community of practice</span>
             </div>
           </div>
         </div>
@@ -161,9 +175,9 @@
     <section id="services" class="services section" aria-labelledby="services-heading">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Services</span>
-          <h2 id="services-heading" class="section-heading">How I can help</h2>
-          <p class="section-subheading">I work with technology leaders to solve complex architecture challenges — from initial strategy through hands-on delivery.</p>
+          <span class="section-tag" data-i18n="services_tag">Services</span>
+          <h2 id="services-heading" class="section-heading" data-i18n="services_heading">How I can help</h2>
+          <p class="section-subheading" data-i18n="services_sub">I work with technology leaders to solve complex architecture challenges — from initial strategy through hands-on delivery.</p>
         </div>
 
         <div class="services-grid">
@@ -174,8 +188,8 @@
                 <path d="M178,40c-7.37,0-14.39,1.4-20.81,4.07-7.55-10.84-20.28-18.07-35.19-18.07-22.06,0-40,15.67-40,35a30.41,30.41,0,0,0,.41,4.93C66.47,73.69,56,87.27,56,104c0,22.09,17.91,40,40,40H178a48,48,0,0,0,0-96Z"/>
               </svg>
             </div>
-            <h3 class="service-title">Cloud Architecture &amp; Strategy</h3>
-            <p class="service-description">Design and optimize AWS architectures aligned to the Well-Architected Framework — covering reliability, security, cost efficiency, and performance at scale.</p>
+            <h3 class="service-title" data-i18n="s1_title">Cloud Architecture &amp; Strategy</h3>
+            <p class="service-description" data-i18n="s1_desc">Design and optimize AWS architectures aligned to the Well-Architected Framework — covering reliability, security, cost efficiency, and performance at scale.</p>
           </div>
 
           <div class="service-card" data-aos="fade-up" data-aos-delay="100">
@@ -184,8 +198,8 @@
                 <path d="M220.59,108.9A48,48,0,0,0,168,40H88A48,48,0,0,0,60.06,124.08,40,40,0,1,0,96,192h88a48,48,0,0,0,36.59-83.1ZM136,152H128V136h8Zm0-32H128V72h8Z"/>
               </svg>
             </div>
-            <h3 class="service-title">Agentic AI Solutions</h3>
-            <p class="service-description">Design and implement agentic AI workflows using AWS Bedrock, Claude, and modern LLM tooling — from customer-facing automation to internal knowledge management systems.</p>
+            <h3 class="service-title" data-i18n="s2_title">Agentic AI Solutions</h3>
+            <p class="service-description" data-i18n="s2_desc">Design and implement agentic AI workflows using AWS Bedrock, Claude, and modern LLM tooling — from customer-facing automation to internal knowledge management systems.</p>
           </div>
 
           <div class="service-card" data-aos="fade-up" data-aos-delay="200">
@@ -194,8 +208,8 @@
                 <path d="M208,40H48A16,16,0,0,0,32,56V120c0,70.76,71.6,100.11,80.38,103.5a16,16,0,0,0,11.24,0C132.4,220.11,224,190.76,224,120V56A16,16,0,0,0,208,40Zm-40,78.34-48,40a8,8,0,0,1-10.34,0l-24-20a8,8,0,0,1,10.34-12.24L112,139.5l42.83-35.7A8,8,0,0,1,168,118.34Z"/>
               </svg>
             </div>
-            <h3 class="service-title">Enterprise Security Architecture</h3>
-            <p class="service-description">Security-by-design guidance backed by CISSP certification — covering threat modeling, identity &amp; access management, compliance posture, and vulnerability remediation.</p>
+            <h3 class="service-title" data-i18n="s3_title">Enterprise Security Architecture</h3>
+            <p class="service-description" data-i18n="s3_desc">Security-by-design guidance backed by CISSP certification — covering threat modeling, identity &amp; access management, compliance posture, and vulnerability remediation.</p>
           </div>
 
           <div class="service-card" data-aos="fade-up" data-aos-delay="0">
@@ -204,8 +218,8 @@
                 <path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17Z"/>
               </svg>
             </div>
-            <h3 class="service-title">Digital Modernization</h3>
-            <p class="service-description">Assess and modernize legacy systems using cloud-native patterns — reducing deployment friction, improving reliability, and eliminating the technical debt that slows delivery.</p>
+            <h3 class="service-title" data-i18n="s4_title">Digital Modernization</h3>
+            <p class="service-description" data-i18n="s4_desc">Assess and modernize legacy systems using cloud-native patterns — reducing deployment friction, improving reliability, and eliminating the technical debt that slows delivery.</p>
           </div>
 
           <div class="service-card" data-aos="fade-up" data-aos-delay="100">
@@ -214,8 +228,8 @@
                 <path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.43a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.51A8,8,0,0,1,250.14,206.7Z"/>
               </svg>
             </div>
-            <h3 class="service-title">Technical Leadership Advisory</h3>
-            <p class="service-description">Coaching and advisory for technology organizations — from architecture governance and certification programs, to building engineering communities of practice that accelerate modern delivery.</p>
+            <h3 class="service-title" data-i18n="s5_title">Technical Leadership Advisory</h3>
+            <p class="service-description" data-i18n="s5_desc">Coaching and advisory for technology organizations — from architecture governance and certification programs, to building engineering communities of practice that accelerate modern delivery.</p>
           </div>
 
         </div>
@@ -228,94 +242,94 @@
     <section id="work" class="work section" aria-labelledby="work-heading">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Featured Work</span>
-          <h2 id="work-heading" class="section-heading">Impact across industries</h2>
-          <p class="section-subheading">A selection of engagements that delivered measurable business outcomes.</p>
+          <span class="section-tag" data-i18n="work_tag">Featured Work</span>
+          <h2 id="work-heading" class="section-heading" data-i18n="work_heading">Impact across industries</h2>
+          <p class="section-subheading" data-i18n="work_sub">A selection of engagements that delivered measurable business outcomes.</p>
         </div>
 
         <div class="work-grid">
 
           <article class="work-card" data-aos="fade-up" data-aos-delay="0">
             <div class="work-card-top">
-              <span class="work-sector sector-insurance">Insurance</span>
-              <h3 class="work-title">Agentic AI Platform for Policy Inquiries</h3>
+              <span class="work-sector sector-insurance" data-i18n="work1_sector">Insurance</span>
+              <h3 class="work-title" data-i18n="work1_title">Agentic AI Platform for Policy Inquiries</h3>
             </div>
             <div class="work-body">
               <div class="work-row">
-                <span class="work-label">Challenge</span>
-                <p class="work-text">High inbound call volume for routine policy inquiries was overloading live agents, increasing operational costs and degrading customer experience.</p>
+                <span class="work-label" data-i18n="work_label_challenge">Challenge</span>
+                <p class="work-text" data-i18n="work1_challenge">High inbound call volume for routine policy inquiries was overloading live agents, increasing operational costs and degrading customer experience.</p>
               </div>
               <div class="work-row">
-                <span class="work-label">Solution</span>
-                <p class="work-text">Designed an end-to-end agentic AI platform integrating Amazon Connect, Lex, Bedrock (Claude Haiku), and AgentCore to automate customer call flows with natural language understanding.</p>
+                <span class="work-label" data-i18n="work_label_solution">Solution</span>
+                <p class="work-text" data-i18n="work1_solution">Designed an end-to-end agentic AI platform integrating Amazon Connect, Lex, Bedrock (Claude Haiku), and AgentCore to automate customer call flows with natural language understanding.</p>
               </div>
             </div>
             <div class="work-outcome">
               <span class="outcome-value">30%</span>
-              <span class="outcome-label">Targeted call deflection from live agents</span>
+              <span class="outcome-label" data-i18n="work1_outcome_label">Targeted call deflection from live agents</span>
             </div>
           </article>
 
           <article class="work-card" data-aos="fade-up" data-aos-delay="100">
             <div class="work-card-top">
-              <span class="work-sector sector-banking">Banking</span>
-              <h3 class="work-title">Permissions API Modernization</h3>
+              <span class="work-sector sector-banking" data-i18n="work2_sector">Banking</span>
+              <h3 class="work-title" data-i18n="work2_title">Permissions API Modernization</h3>
             </div>
             <div class="work-body">
               <div class="work-row">
-                <span class="work-label">Challenge</span>
-                <p class="work-text">A legacy permissions system serving 100+ internal application teams harbored a privilege escalation vulnerability and accumulated significant technical debt.</p>
+                <span class="work-label" data-i18n="work_label_challenge">Challenge</span>
+                <p class="work-text" data-i18n="work2_challenge">A legacy permissions system serving 100+ internal application teams harbored a privilege escalation vulnerability and accumulated significant technical debt.</p>
               </div>
               <div class="work-row">
-                <span class="work-label">Solution</span>
-                <p class="work-text">Designed and implemented a modernized permissions API layer with proper access controls and clean integration contracts, enabling safe incremental team migrations.</p>
+                <span class="work-label" data-i18n="work_label_solution">Solution</span>
+                <p class="work-text" data-i18n="work2_solution">Designed and implemented a modernized permissions API layer with proper access controls and clean integration contracts, enabling safe incremental team migrations.</p>
               </div>
             </div>
             <div class="work-outcome">
               <span class="outcome-value">100+</span>
-              <span class="outcome-label">Application teams protected — privilege escalation vulnerability eliminated</span>
+              <span class="outcome-label" data-i18n="work2_outcome_label">Application teams protected — privilege escalation vulnerability eliminated</span>
             </div>
           </article>
 
           <article class="work-card" data-aos="fade-up" data-aos-delay="0">
             <div class="work-card-top">
-              <span class="work-sector sector-financial">Financial Services</span>
-              <h3 class="work-title">DDoS Crisis Response</h3>
+              <span class="work-sector sector-financial" data-i18n="work3_sector">Financial Services</span>
+              <h3 class="work-title" data-i18n="work3_title">DDoS Crisis Response</h3>
             </div>
             <div class="work-body">
               <div class="work-row">
-                <span class="work-label">Challenge</span>
-                <p class="work-text">An active DDoS attack caused a 4-hour outage affecting the institution's main website and online banking services, threatening customer trust and regulatory standing.</p>
+                <span class="work-label" data-i18n="work_label_challenge">Challenge</span>
+                <p class="work-text" data-i18n="work3_challenge">An active DDoS attack caused a 4-hour outage affecting the institution's main website and online banking services, threatening customer trust and regulatory standing.</p>
               </div>
               <div class="work-row">
-                <span class="work-label">Solution</span>
-                <p class="work-text">Led rapid DDoS mitigation response coordinating across network, security, and application teams to implement AWS Shield and WAF protection measures and restore service.</p>
+                <span class="work-label" data-i18n="work_label_solution">Solution</span>
+                <p class="work-text" data-i18n="work3_solution">Led rapid DDoS mitigation response coordinating across network, security, and application teams to implement AWS Shield and WAF protection measures and restore service.</p>
               </div>
             </div>
             <div class="work-outcome">
-              <span class="outcome-value">Same day</span>
-              <span class="outcome-label">Full service restored — 4-hour outage resolved within business hours</span>
+              <span class="outcome-value" data-i18n="work3_outcome_value">Same day</span>
+              <span class="outcome-label" data-i18n="work3_outcome_label">Full service restored — 4-hour outage resolved within business hours</span>
             </div>
           </article>
 
           <article class="work-card" data-aos="fade-up" data-aos-delay="100">
             <div class="work-card-top">
-              <span class="work-sector sector-retail">Retail</span>
-              <h3 class="work-title">Cloud-Native Platform Modernization</h3>
+              <span class="work-sector sector-retail" data-i18n="work4_sector">Retail</span>
+              <h3 class="work-title" data-i18n="work4_title">Cloud-Native Platform Modernization</h3>
             </div>
             <div class="work-body">
               <div class="work-row">
-                <span class="work-label">Challenge</span>
-                <p class="work-text">Two-month release cycles and a high change failure rate were preventing the engineering team from responding to business needs at pace.</p>
+                <span class="work-label" data-i18n="work_label_challenge">Challenge</span>
+                <p class="work-text" data-i18n="work4_challenge">Two-month release cycles and a high change failure rate were preventing the engineering team from responding to business needs at pace.</p>
               </div>
               <div class="work-row">
-                <span class="work-label">Solution</span>
-                <p class="work-text">Led delivery of the company's first cloud-native application on Microsoft Azure — a product recommendations platform enabling "Customers also bought" on Lowes.com, establishing modern DevOps practices across 12 engineers.</p>
+                <span class="work-label" data-i18n="work_label_solution">Solution</span>
+                <p class="work-text" data-i18n="work4_solution">Led delivery of the company's first cloud-native application on Microsoft Azure — a product recommendations platform enabling "Customers also bought" on Lowes.com, establishing modern DevOps practices across 12 engineers.</p>
               </div>
             </div>
             <div class="work-outcome">
               <span class="outcome-value">8×</span>
-              <span class="outcome-label">Faster deployments — from 2-month to 1-week cycles, 50% reduction in lead time for changes</span>
+              <span class="outcome-label" data-i18n="work4_outcome_label">Faster deployments — from 2-month to 1-week cycles, 50% reduction in lead time for changes</span>
             </div>
           </article>
 
@@ -329,9 +343,9 @@
     <section id="certifications" class="certifications section" aria-labelledby="certifications-heading">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Certifications</span>
-          <h2 id="certifications-heading" class="section-heading">Credentials that back the work</h2>
-          <p class="section-subheading">10 active certifications across enterprise security, cloud architecture, and business strategy.</p>
+          <span class="section-tag" data-i18n="cert_tag">Certifications</span>
+          <h2 id="certifications-heading" class="section-heading" data-i18n="cert_heading">Credentials that back the work</h2>
+          <p class="section-subheading" data-i18n="cert_sub">10 active certifications across enterprise security, cloud architecture, and business strategy.</p>
         </div>
 
         <!-- Enterprise & Security certifications -->
@@ -351,10 +365,10 @@
               <h3 class="cert-name">Certified Information Systems Security Professional</h3>
               <p class="cert-meta">ISC² &nbsp;·&nbsp; May 2025</p>
               <p class="cert-id">ID: 2651281</p>
-              <p class="cert-note">The global gold standard in information security — demonstrating expertise across security architecture, identity &amp; access management, risk management, and 5 additional CISSP domains.</p>
+              <p class="cert-note" data-i18n="cert_cissp_note">The global gold standard in information security — demonstrating expertise across security architecture, identity &amp; access management, risk management, and 5 additional CISSP domains.</p>
               <a href="https://www.credly.com/badges/0a62e960-ebc7-49ab-9f25-90581467ebf8/public_url"
                  target="_blank" rel="noopener noreferrer" class="cert-verify-link">
-                Verify credential
+                <span data-i18n="cert_verify">Verify credential</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,104a8,8,0,0,1-16,0V59.32l-82.34,82.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"/></svg>
               </a>
             </div>
@@ -370,7 +384,7 @@
               <h3 class="cert-name">TOGAF 10</h3>
               <p class="cert-meta">The Open Group &nbsp;·&nbsp; March 2025</p>
               <p class="cert-id">ID: 188660</p>
-              <p class="cert-note">Enterprise architecture framework certification enabling structured, standards-based architecture governance and decision-making across large organizations.</p>
+              <p class="cert-note" data-i18n="cert_togaf_note">Enterprise architecture framework certification enabling structured, standards-based architecture governance and decision-making across large organizations.</p>
             </div>
           </div>
 
@@ -378,7 +392,7 @@
 
         <!-- AWS certifications -->
         <div class="cert-group" data-aos="fade-up">
-          <h3 class="cert-group-label">AWS Certifications</h3>
+          <h3 class="cert-group-label" data-i18n="cert_group_aws">AWS Certifications</h3>
           <div class="cert-aws-grid">
 
             <div class="cert-card cert-card--aws">
@@ -491,7 +505,7 @@
 
         <!-- Business & Finance -->
         <div class="cert-group" data-aos="fade-up">
-          <h3 class="cert-group-label">Business &amp; Finance</h3>
+          <h3 class="cert-group-label" data-i18n="cert_group_fin">Business &amp; Finance</h3>
           <div class="cert-finance-wrap">
             <div class="cert-card cert-card--featured cert-card--finance">
               <div class="cert-badge-wrap cert-badge-wrap--icon" aria-hidden="true">
@@ -503,10 +517,10 @@
                 <h3 class="cert-name">Specialization in Finance for Technical Managers</h3>
                 <p class="cert-meta">University of Colorado Boulder &nbsp;·&nbsp; July 2024</p>
                 <p class="cert-id">ID: 5YRTI0C6UKCN</p>
-                <p class="cert-note">Graduate-level specialization covering financial analysis, capital budgeting, and business strategy — enabling more effective communication with finance stakeholders and C-suite decision-makers.</p>
+                <p class="cert-note" data-i18n="cert_finance_note">Graduate-level specialization covering financial analysis, capital budgeting, and business strategy — enabling more effective communication with finance stakeholders and C-suite decision-makers.</p>
                 <a href="https://www.coursera.org/account/accomplishments/specialization/5YRTI0C6UKCN"
                    target="_blank" rel="noopener noreferrer" class="cert-verify-link">
-                  Verify credential
+                  <span data-i18n="cert_verify">Verify credential</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,104a8,8,0,0,1-16,0V59.32l-82.34,82.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"/></svg>
                 </a>
               </div>
@@ -520,12 +534,12 @@
     <!-- ============================================================
          ARTICLES
          ============================================================ -->
-    <section id="articles" class="articles section" aria-labelledby="articles-heading">
+    <section id="articles" class="articles section" aria-labelledby="articles-heading" style="display:none">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Insights</span>
-          <h2 id="articles-heading" class="section-heading">Perspectives on technology that matters</h2>
-          <p class="section-subheading">Practical writing on cloud architecture, agentic AI, enterprise security, and modern software delivery — from the field.</p>
+          <span class="section-tag" data-i18n="articles_tag">Insights</span>
+          <h2 id="articles-heading" class="section-heading" data-i18n="articles_heading">Perspectives on technology that matters</h2>
+          <p class="section-subheading" data-i18n="articles_sub">Practical writing on cloud architecture, agentic AI, enterprise security, and modern software delivery — from the field.</p>
         </div>
 
         <div class="articles-coming-soon" data-aos="fade-up">
@@ -535,16 +549,16 @@
                 <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/>
               </svg>
             </div>
-            <h3 class="coming-soon-title">Articles launching soon</h3>
-            <p class="coming-soon-body">I'm writing practical, field-tested perspectives on the topics I work with every day. Here's what's coming:</p>
+            <h3 class="coming-soon-title" data-i18n="coming_soon_title">Articles launching soon</h3>
+            <p class="coming-soon-body" data-i18n="coming_soon_body">I'm writing practical, field-tested perspectives on the topics I work with every day. Here's what's coming:</p>
             <div class="topic-chips" role="list" aria-label="Upcoming article topics">
-              <span class="topic-chip" role="listitem">Agentic AI in Financial Services</span>
-              <span class="topic-chip" role="listitem">AWS Well-Architected for Regulated Industries</span>
-              <span class="topic-chip" role="listitem">Security Architecture Patterns for the Enterprise</span>
-              <span class="topic-chip" role="listitem">Cloud Migration Lessons from the Field</span>
-              <span class="topic-chip" role="listitem">Building Engineering Communities of Practice</span>
+              <span class="topic-chip" role="listitem" data-i18n="topic1">Agentic AI in Financial Services</span>
+              <span class="topic-chip" role="listitem" data-i18n="topic2">AWS Well-Architected for Regulated Industries</span>
+              <span class="topic-chip" role="listitem" data-i18n="topic3">Security Architecture Patterns for the Enterprise</span>
+              <span class="topic-chip" role="listitem" data-i18n="topic4">Cloud Migration Lessons from the Field</span>
+              <span class="topic-chip" role="listitem" data-i18n="topic5">Building Engineering Communities of Practice</span>
             </div>
-            <a href="articles/index.html" class="btn btn-primary">Go to Articles</a>
+            <a href="articles/index.html" class="btn btn-primary" data-i18n="articles_btn" style="display:none">Go to Articles</a>
           </div>
         </div>
       </div>
@@ -558,28 +572,27 @@
   <footer id="contact" class="site-footer" aria-labelledby="contact-heading">
     <div class="container footer-container">
       <div class="footer-content" data-aos="fade-up">
-        <h2 id="contact-heading" class="footer-heading">Ready to talk about your next project?</h2>
-        <p class="footer-subheading">Whether you're planning a cloud transformation, exploring AI capabilities, or navigating a critical architecture decision — I'm happy to have a conversation.</p>
+        <h2 id="contact-heading" class="footer-heading" data-i18n="footer_heading">Ready to talk about your next project?</h2>
+        <p class="footer-subheading" data-i18n="footer_sub">Whether you're planning a cloud transformation, exploring AI capabilities, or navigating a critical architecture decision — I'm happy to have a conversation.</p>
         <div class="footer-actions">
           <a href="mailto:isc.abel@gmail.com?subject=Consulting%20Inquiry" class="btn btn-primary btn-large">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
               <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19Z"/>
             </svg>
-            Send an Email
+            <span data-i18n="footer_email_btn">Send an Email</span>
           </a>
-          <!-- TODO: Replace href with your actual LinkedIn URL -->
           <a href="https://www.linkedin.com/in/abel-fresnillo" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-large">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
               <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v96a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v68a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v68a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/>
             </svg>
-            Connect on LinkedIn
+            <span data-i18n="footer_linkedin_btn">Connect on LinkedIn</span>
           </a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 Abel Fresnillo. All rights reserved.</p>
+        <p class="footer-copyright" data-i18n="footer_copyright">&copy; 2026 Abel Fresnillo. All rights reserved.</p>
         <nav aria-label="Footer navigation">
-          <a href="#hero">Back to top</a>
+          <a href="#hero" data-i18n="footer_back_top">Back to top</a>
         </nav>
       </div>
     </div>
@@ -587,6 +600,8 @@
 
   <!-- AOS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Translations -->
+  <script src="js/translations.js"></script>
   <!-- Main JS -->
   <script src="js/main.js"></script>
 

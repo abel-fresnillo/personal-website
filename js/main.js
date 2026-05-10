@@ -1,5 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── i18n ─────────────────────────────────────────────────────────────────
+  function applyLanguage(lang) {
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (translations[lang]?.[key] !== undefined) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    if (translations[lang].page_title)  document.title = translations[lang].page_title;
+    if (translations[lang].articles_page_title && document.body.classList.contains('articles-page')) {
+      document.title = translations[lang].articles_page_title;
+    }
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      const key = document.body.classList.contains('articles-page') ? 'articles_meta_desc' : 'meta_desc';
+      if (translations[lang][key]) metaDesc.content = translations[lang][key];
+    }
+
+    localStorage.setItem('lang', lang);
+
+    document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+      const active = btn.dataset.lang === lang;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  function initLanguage() {
+    const saved = localStorage.getItem('lang') || 'en';
+    applyLanguage(saved);
+  }
+
+  document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+  });
+
+  initLanguage();
+
   // ── AOS ──────────────────────────────────────────────────────────────────
   AOS.init({
     duration: 500,

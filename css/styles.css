@@ -5,9 +5,8 @@
   /* Primary — Deep Blue */
   --color-primary-900: #0f2d6b;
   --color-primary-800: #1340a8;
-  --color-primary-700: #1a4fc4;
-  --color-primary-600: #1a56db;
-  --color-primary-500: #2563eb;
+  --color-primary-700: #1540b0;
+  --color-primary-600: #1748d4;
   --color-primary-100: #dbeafe;
   --color-primary-050: #eff6ff;
 
@@ -15,6 +14,7 @@
   --color-neutral-900: #0f172a;
   --color-neutral-800: #1e293b;
   --color-neutral-700: #334155;
+  --color-neutral-600: #475569;
   --color-neutral-500: #64748b;
   --color-neutral-400: #94a3b8;
   --color-neutral-300: #cbd5e1;
@@ -30,7 +30,7 @@
   --color-sector-insurance-bg: #f3e8ff;
   --color-sector-insurance-text: #7c3aed;
   --color-sector-banking-bg: #dbeafe;
-  --color-sector-banking-text: #1a56db;
+  --color-sector-banking-text: #1748d4;
   --color-sector-financial-bg: #ccfbf1;
   --color-sector-financial-text: #0d9488;
   --color-sector-retail-bg: #d1fae5;
@@ -237,7 +237,7 @@ p { max-width: 68ch; }
   background-color: var(--color-primary-700);
   border-color: var(--color-primary-700);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(26, 86, 219, 0.35);
+  box-shadow: 0 4px 14px rgba(23, 72, 212, 0.35);
 }
 
 .btn-outline {
@@ -254,13 +254,13 @@ p { max-width: 68ch; }
 .btn-outline-light {
   background-color: transparent;
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.65);
 }
 
 .btn-outline-light:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.9);
 }
 
 .btn-large {
@@ -420,7 +420,6 @@ p { max-width: 68ch; }
 
 /* Mobile menu */
 .mobile-menu {
-  display: none;
   position: fixed;
   top: var(--nav-height);
   left: 0;
@@ -431,13 +430,17 @@ p { max-width: 68ch; }
   z-index: 99;
   transform: translateY(-8px);
   opacity: 0;
-  transition: transform var(--transition-base), opacity var(--transition-base);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform var(--transition-base), opacity var(--transition-base), visibility 0s var(--transition-base);
 }
 
 .mobile-menu.is-open {
-  display: block;
   transform: translateY(0);
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform var(--transition-base), opacity var(--transition-base), visibility 0s 0s;
 }
 
 .mobile-menu ul {
@@ -562,7 +565,7 @@ footer[id] {
 
 .hero-tagline {
   font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-700);
   line-height: 1.75;
   max-width: 52ch;
   margin-bottom: var(--space-10);
@@ -701,7 +704,7 @@ footer[id] {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-500);
   flex-shrink: 0;
   max-width: none;
 }
@@ -811,7 +814,48 @@ footer[id] {
    SERVICES
    ========================================================================== */
 .services {
-  background-color: var(--color-surface);
+  background-color: var(--color-primary-900);
+}
+
+.services .section-tag {
+  color: var(--color-primary-100);
+}
+
+.services .section-heading {
+  color: #ffffff;
+}
+
+.services .section-subheading {
+  color: var(--color-primary-100);
+}
+
+.services .service-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.services .service-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.services .service-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-primary-100);
+}
+
+.services .service-card:hover .service-icon {
+  background-color: #ffffff;
+  color: var(--color-primary-600);
+}
+
+.services .service-title {
+  color: #ffffff;
+}
+
+.services .service-description {
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .services-grid {
@@ -1071,7 +1115,7 @@ footer[id] {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(26, 86, 219, 0.82);
+  background-color: rgba(23, 72, 212, 0.82);
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -1408,6 +1452,65 @@ footer[id] {
 
 .footer-bottom nav a:hover {
   color: var(--color-neutral-300);
+}
+
+/* ==========================================================================
+   LANGUAGE TOGGLE
+   ========================================================================== */
+.lang-toggle {
+  display: none;
+  align-items: center;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .lang-toggle {
+    display: flex;
+    margin-left: var(--space-6);
+  }
+}
+
+.lang-toggle--mobile {
+  display: flex;
+  width: fit-content;
+}
+
+.lang-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0.3rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-neutral-400);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  line-height: 1;
+  min-width: 40px;
+  text-align: center;
+}
+
+.lang-toggle-btn.is-active {
+  background-color: var(--color-primary-600);
+  color: #ffffff;
+}
+
+.lang-toggle-btn:hover:not(.is-active) {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-700);
+}
+
+.lang-toggle-btn:focus-visible {
+  outline: 2px solid var(--color-primary-600);
+  outline-offset: -2px;
+}
+
+.mobile-lang-toggle {
+  padding-top: var(--space-2);
 }
 
 /* ==========================================================================
