@@ -137,7 +137,7 @@ const translations = {
     nav_work:         "Proyectos",
     nav_certs:        "Certificaciones",
     nav_articles:     "Artículos",
-    nav_cta:          "Conversémoslo",
+    nav_cta:          "Contacto",
     lang_label:       "Seleccionar idioma",
 
     // ── Meta de página ───────────────────────────────────────────────────
@@ -149,7 +149,7 @@ const translations = {
 
     // ── Hero ─────────────────────────────────────────────────────────────
     hero_eyebrow:       "Director de Arquitectura · Estrategia de IA y Nube",
-    hero_tagline:       "Ayudo a las organizaciones a navegar sus desafíos tecnológicos más complejos — desde la modernización en la nube hasta la IA agéntica — y los convierto en resultados de negocio medibles.",
+    hero_tagline:       "Ayudo a organizaciones a navegar sus desafíos tecnológicos más complejos — desde la modernización en la nube hasta la IA agéntica — y los convierto en resultados de negocio medibles.",
     hero_cta_primary:   "Hablemos",
     hero_cta_secondary: "Ver mis proyectos",
 
@@ -159,9 +159,9 @@ const translations = {
     // ── Sobre mí ──────────────────────────────────────────────────────────
     about_tag:     "Sobre mí",
     about_heading: "Conectando estrategia e ingeniería desde 2005",
-    about_lead:    "He pasado más de 15 años en la intersección de la estrategia tecnológica y la entrega — desde mis primeros servicios web en Softtek en Monterrey, México, hasta liderar compromisos de arquitectura de nube e IA para bancos y compañías de seguros de Fortune 500.",
-    about_p1:      "Lo que distingue mi trabajo es que puedo conectar la visión ejecutiva con la realidad de la ingeniería. He ocupado roles en ambos lados: como ingeniero senior que lideró la primera aplicación nativa de la nube de Lowe’s en Microsoft Azure, y como Arquitecto de Soluciones Senior en AWS asesorando a empresas en sus desafíos de nube más complejos.",
-    about_p2:      "Hoy trabajo directamente con clientes para diseñar soluciones tecnológicas que abordan desafíos empresariales complejos — desde plataformas de IA agéntica que automatizan las operaciones con clientes, hasta arquitecturas de seguridad que eliminan vulnerabilidades críticas. Aporto tanto la profundidad técnica para hacer bien los detalles como la perspectiva estratégica para asegurar que el trabajo genere valor real para el negocio.",
+    about_lead:    "He pasado más de 15 años en la intersección de la estrategia tecnológica y la entrega — desde mis primeros servicios web en Softtek en Monterrey, México, hasta liderar proyectos de arquitectura de nube e IA para bancos y compañías de seguros de Fortune 500.",
+    about_p1:      "Lo que distingue mi trabajo es que puedo conectar la visión ejecutiva con la realidad de la ingeniería. He ocupado roles en ambos lados: como ingeniero senior que lideró la primera aplicación nativa de la nube de Lowe’s en Microsoft Azure, tanto como Arquitecto de Soluciones Senior en AWS asesorando a empresas en sus desafíos de nube más complejos.",
+    about_p2:      "Hoy trabajo directamente con clientes para diseñar soluciones tecnológicas que abordan desafíos empresariales complejos — desde plataformas de IA agéntica que automatizan las operaciones con clientes, hasta arquitecturas de seguridad que eliminan vulnerabilidades críticas. Aporto tanto la profundidad técnica para hacer bien los detalles como la perspectiva estratégica para asegurar que el trabajo genere valor real para organizaciones.",
     stat_years:     "Años de experiencia",
     stat_certs:     "Certificaciones profesionales",
     stat_community: "Ingenieros en comunidad de práctica",
