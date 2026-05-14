@@ -2,7 +2,7 @@ const translations = {
   en: {
     // ── Navigation ───────────────────────────────────────────────────────
     nav_about:        "About",
-    nav_services:     "Services",
+    nav_services:     "Areas of Expertise",
     nav_work:         "Work",
     nav_certs:        "Certifications",
     nav_articles:     "Articles",
@@ -36,7 +36,7 @@ const translations = {
     stat_community: "Engineers in community of practice",
 
     // ── Services ─────────────────────────────────────────────────────────
-    services_tag: "Services",
+    services_tag: "Areas of Expertise",
     services_heading: "How I can help",
     services_sub: "I work with technology leaders to solve complex architecture challenges — from initial strategy through hands-on delivery.",
 
@@ -133,7 +133,7 @@ const translations = {
   es: {
     // ── Navegación ───────────────────────────────────────────────────────
     nav_about:        "Sobre mí",
-    nav_services:     "Servicios",
+    nav_services:     "Áreas de Expertise",
     nav_work:         "Proyectos",
     nav_certs:        "Certificaciones",
     nav_articles:     "Artículos",
@@ -167,7 +167,7 @@ const translations = {
     stat_community: "Ingenieros en comunidad de práctica",
 
     // ── Servicios ────────────────────────────────────────────────────────
-    services_tag:     "Servicios",
+    services_tag:     "Áreas de Expertise",
     services_heading: "Cómo puedo ayudarte",
     services_sub:     "Trabajo con líderes tecnológicos para resolver desafíos complejos de arquitectura — desde la estrategia inicial hasta la entrega hands-on.",
 
